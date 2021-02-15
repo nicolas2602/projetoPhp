@@ -1,6 +1,8 @@
 <?php
 include 'connect.php';
 ?>
+<a href="home.php">Home</a>
+
 <table border='1'>
     <tr>
         <th>
