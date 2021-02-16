@@ -6,12 +6,13 @@ if(isset($_POST['sub'])){
     $p=$_POST['pass'];
     $c=$_POST['city'];
     $g=$_POST['gen'];
+
     if($_FILES['f1']['name']){
-    move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
-    $img="image/".$_FILES['f1']['name'];
+        move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
+        $img="image/".$_FILES['f1']['name'];
     }
-    $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
-    mysqli_query($con, $i);
+       $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
+       mysqli_query($con, $i);
 }
 ?>
 
@@ -45,9 +46,20 @@ if(isset($_POST['sub'])){
                     <td>
                         city
                         <select name="city">
-                            <option value="">-select-</option>
-                            <option value="knp">kanpur</option>
-                            <option value="lko">lucknow</option>
+                            <option value="">-Select-</option>
+                           
+                             <?php 
+
+                              $sql = mysqli_query($con, "select * from city");
+                              while($item = mysqli_fetch_assoc($sql))
+                              {
+                                  $nomeItem = $item['nameCity'];
+                                  $idCity= $item['idCity'];
+                                  echo "<option value=$nomeItem>$nomeItem</option>";
+                              }
+
+                             ?>
+
                     </td>
                 </tr>
                 <tr>
