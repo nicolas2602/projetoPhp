@@ -1,5 +1,5 @@
 CREATE TABLE `city` (
-  `IdCity` int(20) NOT NULL,
+  `IdCity` int(11) PRIMARY KEY AUTO_INCREMENT,
   `nameCity` varchar(20) NOT NULL
 )
 
