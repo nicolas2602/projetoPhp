@@ -17,7 +17,7 @@ if(isset($_POST['sub'])){
         <title></title>
     </head>
     <body>
-        <form method="POST" enctype="multipart/form-data">
+        <form method="GET" enctype="multipart/form-data">
            <h1>Cidade</h1>
            
             <table>
@@ -37,10 +37,39 @@ if(isset($_POST['sub'])){
 
                 <tr>
                     <td>
-                        <a href="login.php">Login</a>
+                        <a href="home.php">Home</a>
                                
                     </td>
                 </tr>
             </table>
+
+            <table border='1'>
+    <tr>
+        <th>
+            Nome da cidade
+        </th>
+
+        <th>
+            ID
+        </th>
+    </tr>
+            <?php
+$sq="select * from city";
+$qu=mysqli_query($con,$sq);
+while($f=  mysqli_fetch_assoc($qu)){
+    ?>
+    <tr>
+        <td>
+            <?php echo $f['nameCity']?>
+        </td>
+
+        <td>
+        <a href="edit_city.php?IdCity=<?php echo $f['IdCity']?>">Edit</a>
+        </td>
+    </tr>
+    <?php
+}
+?>
+</table>
     </body>
 </html>
