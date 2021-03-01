@@ -17,8 +17,13 @@ if(isset($_POST['sub'])){
         <title></title>
     </head>
     <body>
+
         <form method="GET" enctype="multipart/form-data">
            <h1>Cidade</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+           <h1>Registrar Cidade</h1>
+
            
             <table>
                 <tr>
@@ -43,6 +48,7 @@ if(isset($_POST['sub'])){
                 </tr>
             </table>
 
+
             <table border='1'>
     <tr>
         <th>
@@ -64,12 +70,13 @@ while($f=  mysqli_fetch_assoc($qu)){
         </td>
 
         <td>
-        <a href="edit_city.php?IdCity=<?php echo $f['IdCity']?>">Edit</a>
+          <a href="edit_city.php?IdCity=<?php echo $f['IdCity']?>&nameCity=<?php echo $f['nameCity']?>">Edit</a>
         </td>
     </tr>
     <?php
 }
 ?>
-</table>
+
+      </table>
     </body>
 </html>
