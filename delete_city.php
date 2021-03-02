@@ -10,12 +10,16 @@
 include 'connect.php';
 include 'CheckLogin.php';
 
-if(isset($_POST['update'])){
+if(isset($_POST['del'])){
     $id=$_POST['id'];
     $nameCity=$_POST['name'];
 
-    $sqlUpdateCity="update city set nameCity = '$nameCity' where IdCity={$id}";
-    mysqli_query($con, $sqlUpdateCity);
+    $sqlDeleteCity="delete from city where IdCity={$id}";
+    mysqli_query($con, $sqlDeleteCity);
+    header('location: reg_city.php');
+}
+
+if(isset($_POST['notdel'])){
     header('location: reg_city.php');
 }
 
@@ -32,20 +36,25 @@ if(isset($_POST['update'])){
             <table>
                 <tr>
                     <td>
-                        ID 
-                        <input readonly="readonly" type="text" name="id" value="<?php echo $resultCity['IdCity']?>">
+                        <!---ID ---> 
+                        <input type="hidden" name="id" value="<?php echo $resultCity['IdCity']?>">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Cidade
+                       Deseja exluir a cidade <?php echo $resultCity['nameCity'] ?>
                         <input type="text" name="name" value="<?php echo $resultCity['nameCity']?>">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <input type="submit" value="submit" name="update">
+                        <input type="submit" value="Delete" name="del">
+                               
+                    </td>
+
+                    <td>
+                        <input type="submit" value="Not Delete" name="notdel">
                                
                     </td>
                 </tr>

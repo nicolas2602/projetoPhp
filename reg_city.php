@@ -72,6 +72,10 @@ while($f=  mysqli_fetch_assoc($qu)){
         <td>
           <a href="edit_city.php?IdCity=<?php echo $f['IdCity']?>&nameCity=<?php echo $f['nameCity']?>">Edit</a>
         </td>
+
+        <td>
+          <a href="delete_city.php?IdCity=<?php echo $f['IdCity']?>&nameCity=<?php echo $f['nameCity']?>">Delete</a>
+        </td>
     </tr>
     <?php
 }
