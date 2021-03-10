@@ -22,9 +22,11 @@ if(isset($_POST['sub'])){
       
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/template.css">
         <title></title>
     </head>
     <body>
+        
         <form method="POST" enctype="multipart/form-data">
             <table>
                 
