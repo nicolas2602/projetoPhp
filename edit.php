@@ -79,20 +79,20 @@ if(isset($_POST['sub'])){
                         Gender
                         <?php if($f['gender']=='male'){
                             ?>
-                          <input type="radio"name="gen" id="gen" value="male" checked>
+                          <input type="radio"name="gen" id="gen" value="Male" checked>
                         <?php
                         } else {
 ?>
-                        <input type="radio"name="gen" id="gen" value="male">
-                        <?php } ?>male
+                        <input type="radio"name="gen" id="gen" value="Male">
+                        <?php } ?>Male
                        <?php if($f['gender']=='female'){
                             ?>
-                          <input type="radio"name="gen" id="gen" value="female" checked>
+                          <input type="radio"name="gen" id="gen" value="Female" checked>
                         <?php
                         } else {
 ?>
-                        <input type="radio"name="gen" id="gen" value="female">
-                        <?php } ?>female
+                        <input type="radio"name="gen" id="gen" value="Female">
+                        <?php } ?>Female
                     </td>
                 </tr>
                 <tr>

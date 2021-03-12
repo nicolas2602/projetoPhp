@@ -43,7 +43,7 @@
    
 <div class="row justify-content-center">
       <div class="form-group col-md-3">
-      <img src="<?php echo $f['image'];?>" width="100px" height="100px">
+      <img src="<?php echo $f['image'];?>" width="110px" height="110px">
       </div>
 </div>
 
