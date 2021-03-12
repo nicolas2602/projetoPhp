@@ -37,48 +37,46 @@
   </center>
 </nav>
 
-<br><br><br>
+<br><br>
 <main role="main" class="container-fluid col-sm-6">
 <div class="jumbotron bg-white rounded">
    
+<div class="row justify-content-center">
+      <div class="form-group col-md-3">
+      <img src="<?php echo $f['image'];?>" width="100px" height="100px">
+      </div>
+</div>
+
     <div class="row justify-content-center">
       <div class="form-group col-md-3">
-        <b><label class="sr-only">Name</label></b>
+        <b><label class="sr-only">Name:</label></b>
          <label class="form-control mb-2 mr-sm-2"><?php echo $f['name'];?></label>
       </div>
 
     
       <div class="form-group col-md-3">
-       <b><label class="sr-only">Username</label></b>
+       <b><label class="sr-only">Username:</label></b>
        <label class="form-control mb-2 mr-sm-2"><?php echo $f['username'];?></label>
       </div>
     </div>
 
      <div class="row justify-content-center">
       <div class="form-group col-md-3">
-        <b><label class="sr-only">Password</label></b>
+        <b><label class="sr-only">Password:</label></b>
          <label class="form-control mb-2 mr-sm-2"><?php echo $f['password']."<br>";?></label>
       </div>  
 
        <div class="form-group col-md-3">
-        <b><label class="sr-only">City</label></b>
+        <b><label class="sr-only">City:</label></b>
          <label class="form-control mb-2 mr-sm-2"> <?php echo $f['city']."<br>";?></label>
       </div>         
      </div>
     
      <div class="row justify-content-center">
       <div class="form-group col-md-3">
-        <b><label class="sr-only">Gender</label></b>
+        <b><label class="sr-only">Gender:</label></b>
          <label class="form-control mb-2 mr-sm-2"><?php echo $f['gender']."<br>";?></label>
       </div>  
-     
-      <div class="form-group col-md-3">
-         <img src="<?php echo $f['image'];?>" width="100px" height="100px">
-      </div>
-    </div> 
-       
-
- 
 
 </main>
 </div>
@@ -145,7 +143,7 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="reg_city.php" class="text-dark">Registar Cidade</a>
+            <a href="reg_city.php" class="text-dark">Registrar Cidade</a>
           </li>
        
         </ul>
@@ -158,14 +156,14 @@
 
   
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright X-MAX
+    © 2021 Copyright X-MAX
   </div>
   
 </footer>
  
 <script>
   function confirmExclusao() {
-    if (confirm("Tem certeza que deseja excluir essa categoria?")) {
+    if (confirm("Tem certeza que deseja deletar?")) {
       location.href="deletar_categoria.jsp?acao=deletar";
     }
 }

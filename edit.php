@@ -29,6 +29,7 @@ if(isset($_POST['sub'])){
     ?> 
 
 <form method="POST" enctype="multipart/form-data">
+<h2>Editar</h2>
             <table>
                 <tr>
                     <td>

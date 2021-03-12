@@ -23,7 +23,7 @@ if(isset($_POST['sub'])){
 <html>
   <head>
     <link rel="stylesheet" href="baseCss.css">
-
+    <title>Login</title>
   </head>
   <body>
 
