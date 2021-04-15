@@ -1,11 +1,12 @@
 <?php
 include 'connect.php';
+include 'checkAdmin.php';
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <a href="home.php" class="btn btn-light d-flex justify-content-around">Home</a>
 
-<table class="table table-striped">
+<table class="table table-striped text-center">
   <thead>
     <tr>
       <th scope="col">Name</th>

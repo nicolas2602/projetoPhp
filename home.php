@@ -30,23 +30,37 @@
       <a class="nav-item nav-link active" href="edit.php">Editar <span class="sr-only"></span></a>
       <a class="nav-item nav-link" href="delete.php" onclick="confirmExclusao()">Deletar</a>
       <a class="nav-item nav-link" href="logout.php">Logout</a>
-      <a class="nav-item nav-link" href="viewall.php">Visualizar</a>
-      <a class="nav-item nav-link" href="reg_city.php">Registrar Cidade</a>
+
+      <?php
+           if($_SESSION['profile']=='Admin'){
+             echo "
+             <a class='nav-item nav-link' href='viewall.php'>Visualizar</a>
+             <a class='nav-item nav-link' href='reg_city.php'>Registrar Cidade</a>
+             ";
+           }else{
+             echo"
+            <a class='nav-item nav-link' href=''>Você não tem permissão</a>
+           ";
+          }
+      ?>
+
+      
+      <a class="nav-link"><img alt="perfil" class="rounded" src="<?php echo $f['image'];?>" width="40px"></a>
     </div>
   </div>
   </center>
 </nav>
 
-<br><br>
+<br>
 <main role="main" class="container-fluid col-sm-6">
 <div class="jumbotron bg-white rounded">
    
 <div class="row justify-content-center">
       <div class="form-group col-md-3">
-      <img src="<?php echo $f['image'];?>" width="110px" height="110px">
+      <img src="<?php echo $f['image'];?>" width="120px" height="120px">
       </div>
 </div>
-
+<br>
     <div class="row justify-content-center">
       <div class="form-group col-md-3">
         <b><label class="sr-only">Name:</label></b>

@@ -35,15 +35,18 @@ CREATE TABLE `reg` (
   `city` varchar(15) NOT NULL,
   `image` varchar(50) NOT NULL,
   `gender` varchar(10) NOT NULL,
-  `id` int(11) NOT NULL
+  `id` int Primary Key AUTO_INCREMENT
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `reg`
 --
 
-INSERT INTO `reg` (`name`, `username`, `password`, `city`, `image`, `gender`, `id`) VALUES
-('Bikash', 'bikash', 'bikash', 'knp', 'image/images.png', 'male', 2);
+INSERT INTO `reg` (`name`, `username`, `password`, `city`, `image`, `gender`) VALUES
+('Bikash', 'bikash', 'bikash', 'knp', 'image/images.png', 'male');
+
+INSERT INTO `reg` (`name`, `username`, `password`, `city`, `image`, `gender`) VALUES
+('Nicolas', 'Nico', '123', 'knp', 'image/images.png', 'male');
 
 --
 -- Indexes for dumped tables

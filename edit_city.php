@@ -9,6 +9,7 @@
 
 include 'connect.php';
 include 'CheckLogin.php';
+include 'checkAdmin.php';
 
 if(isset($_POST['update'])){
     $id=$_POST['id'];

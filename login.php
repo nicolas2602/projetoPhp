@@ -1,15 +1,18 @@
 <?php
-include'connect.php';
+include 'connect.php';
 
 if(isset($_POST['sub'])){
     $u=$_POST['user'];
     $p=$_POST['pass'];
-    $s= "select * from reg where username='$u' and password= '$p'";   
+    $s= "select * from reg as r 
+         inner join profile_reg as p on P.idProfile = r.fk_idProfile
+         where username='$u' and password= '$p'";   
    $qu= mysqli_query($con, $s);
    
    if(mysqli_num_rows($qu)>0){
       $f= mysqli_fetch_assoc($qu);
       $_SESSION['id']=$f['id'];
+      $_SESSION['profile']=$f['nameProfile'];
       header ('location:home.php');
    }
    else{
