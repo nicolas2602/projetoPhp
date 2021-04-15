@@ -28,7 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="edit.php">Editar <span class="sr-only"></span></a>
-      <a class="nav-item nav-link" href="delete.php" onclick="confirmExclusao()">Deletar</a>
+      <a class="nav-item nav-link" href="delete.php" onclick="return confirm('Deseja excluir a sua conta?')>Deletar</a>
       <a class="nav-item nav-link" href="logout.php">Logout</a>
 
       <?php
@@ -121,7 +121,7 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="delete.php" class="text-dark" onclick="confirmExclusao()">Deletar</a>
+            <a href="delete.php" class="text-dark" onclick="return confirm('Deseja excluir a sua conta?')">Deletar</a>
           </li>
         </ul>
       </div>
@@ -175,13 +175,6 @@
   
 </footer>
  
-<script>
-  function confirmExclusao() {
-    if (confirm("Tem certeza que deseja deletar?")) {
-      location.href="deletar_categoria.jsp?acao=deletar";
-    }
-}
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </body>
