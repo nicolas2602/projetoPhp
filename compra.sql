@@ -3,7 +3,7 @@ Create table compra(
     dataCompra datetime default now(),
     valorCompraTotal float,
     fk_IdReg int not null,
-    foreign key (fk_IdReg) refrences reg(id)
+    foreign key (fk_IdReg) references reg(id)
 );
 
 CREATE table produto(
