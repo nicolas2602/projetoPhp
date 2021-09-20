@@ -87,7 +87,7 @@ while($produto=  mysqli_fetch_assoc($qu)){
             <?php echo $produto['NOME_PRODUTO']?>
         </td>
         <td>
-            <?php echo $produto['price']?>
+            <?php echo $produto['preco']?>
         </td>
         <td>
             <form method="POST" enctype="multipart/form-data">
